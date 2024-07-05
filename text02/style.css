@@ -1,0 +1,858 @@
+@import "reset.css";
+
+/* 바른공군체 Blod */
+
+@font-face {
+    font-family: 'ROKAFSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 바른공군체 Medium */
+
+@font-face {
+    font-family: 'ROKAFSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*  Noto Sans KR */
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    /* 기본 밑줄을 제거합니다 */
+
+}
+
+i {
+    font-size: 35px;
+    color: #0453bc;
+    margin: 40px 0px;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+header {
+    position: relative;
+    /* dorpdown 부모 */
+    padding: 0px 30px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0px;
+  
+  }
+  
+  .nav-toggle{
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+    font-size: 20px;
+    
+  }
+  
+  .nav-list {
+    margin: 0px 120px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+  
+  .nav-list li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-list li a {
+    font-weight: 700px;
+    font-size: 24px;
+    display: block;
+    color: #0453bc;
+    padding: 14px 36px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+
+
+  body > header > nav > ul > li > a {
+    font-weight: 600;
+
+
+  }
+  .drop-line {
+    display: none;
+
+  }
+
+  
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+      display: none;
+      top: 0%;
+      position: absolute;
+      background-color: #a2c0e7;
+      min-width: 160px;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+
+  
+  
+  /* durl */
+  
+  
+  .PC-dropdown {
+  
+    display: none;
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+      opacity: 0.9;
+      top: 100%;
+      /* 부모 요소 하단에 위치 */
+      left: 0;
+  
+  }
+  
+  
+  .DropDown1 {
+      height: 130px;
+      background-color: #0453bc;
+      display: flex;
+      align-items: flex-start;
+      gap: 64px;
+      padding-left: 622px;
+  
+  
+  }
+  
+  header:hover .PC-dropdown {
+      display: block;
+  }
+  
+
+
+  .drop {
+    padding: 15px 15px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+  
+  }
+  
+  .drop>li>a {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+  
+  }
+
+
+
+
+.DropDown {
+    height: 130px;
+    background-color: #0453bc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding-right: 78px;
+
+}
+
+
+.drop {
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+}
+
+.drop>li>a {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+
+}
+
+.mySwiper .swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgb(255 0 0 / 50%);
+    border-radius: var(--swiper-scrollbar-border-radius, 10px);
+    left: 0px;
+    top: 0px;
+}
+
+/* 스크롤 버튼 만들기*/
+
+#scrollToTopBtn {
+    display: none; /* 초기에는 숨김 상태 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+
+  }
+  
+  #scrollToTopBtn img {
+    width: 100px; 
+    height: auto; 
+    cursor: pointer;
+  }
+
+
+/* main */
+
+
+
+.box-item {
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%; /* 슬라이드 높이 설정 */
+    overflow: hidden; /* 스크롤을 감추기 위해 필요 */
+    position: relative;
+  }
+
+  .swiper-wrapper {
+    display: flex; /* 슬라이드를 가로로 배열하기 위해 필요 */
+  }
+
+  .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .swiper-slide img {
+  display: block;
+
+  object-fit: cover;
+}
+
+  .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: var(--swiper-scrollbar-sides-offset, 10%);
+  bottom: var(--swiper-scrollbar-bottom, 0px);
+  top: var(--swiper-scrollbar-top, auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 20px);
+  width: calc((100% / 3) - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+}
+
+  .swiper-scrollbar {
+  border-radius: var(--swiper-scrollbar-border-radius, 0px);
+  position: relative;
+  touch-action: none;
+  background: var(--swiper-scrollbar-bg-color, rgba(223, 19, 19, 0.1));
+  background-color: #ccc;
+  width: 200px;
+  }
+  .swiper-scrollbar-drag {
+
+  position: relative;
+  border-radius: 0px;
+  left: 0px;
+  top: 0px;
+  background-color: #ffe047;;
+  height: 20px;
+  }
+
+  .text {
+  
+  background-color: rgb(243, 248, 253);
+  height: 660px;
+  width: 670px;
+  position: absolute;
+  opacity: 0.7;
+  padding: 236px 50px;
+  text-align: left;
+  z-index: 2;
+  bottom: 0%;
+  left: 55%;
+
+
+}
+
+
+
+.text>span {
+  font-size: 47px;
+
+
+}
+
+.text>p {
+  margin : 10px 5px;
+  font-size: 20px;
+}
+
+body>main>div>div:nth-child(2)>hr {
+    margin: 70px 0px;
+    width: 500px;
+}
+
+
+/*introduction*/
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+
+
+}
+
+
+
+
+.introduction-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 155px;
+    gap: 10px;
+
+
+}
+
+.introduction-text h3 {
+    font-size: 25px;
+    font-family: 'ROKAFSansMedium';
+}
+
+.introduction-text h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.introduction-text span {
+    font-size: 20px;
+    line-height: 2.1;
+
+    width: 800px;
+
+
+}
+
+.introduction::before {
+    content: "";
+    background: rgb(255 224 71);
+    height: 23px;
+    width: 145px;
+    position: relative;
+    bottom: 175px;
+
+}
+
+
+
+.introduction-img {
+    position: static;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.introduction-img::before {
+    content: '';
+    /* 배경색으로 테두리션을 표현하므로 컨텐츠는 필요 없음 */
+    background-color: rgb(241 241 241);
+    width: 100px;
+    height: 700px;
+    width: 145px;
+    /* 선 길이 조절 */
+    position: relative;
+    left: 80px;
+    z-index: -1;
+    /* 타이틀 컨텐츠 뒤로 가상요소를 배치 */
+
+}
+
+
+/*business*/
+.business {
+    margin: 0 150px;
+}
+
+.business>h2 {
+    font-size: 60px;
+    font-family: 'ROKAFSansBold';
+}
+
+.business>hr {
+    margin: 50px 0px;
+
+}
+
+.business>p {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.card {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.business-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(241 241 241);
+}
+
+.business-card>h1 {
+    font-size: 35px;
+    font-weight: 500;
+}
+.business-card>hr {
+    width: 120px;
+    height: 2px;
+    background-color: rgb(112 112 112);
+    border: none;
+}
+
+.business-card>p {
+
+    text-align: center;
+    line-height: 200%;
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #0453bc;
+    color: white;
+    height: 40px;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+header{
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+  }
+  
+.nav-list {
+    
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #0453bc;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 99;
+ /* 네비게이션 바 상단 위치 조정 */
+    left: 0;
+    margin: 0;
+    padding-bottom: 200px;
+}
+
+.nav-list li a {
+    font-weight: 900px;
+    font-size: 22px;
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 33px;
+    text-align: left;
+  }
+
+.nav-list.active {
+    display: flex;
+}
+
+.nav-list li {
+    text-align: center;     
+}
+
+.drop-line {
+    display: block;
+    width: 90%;
+    margin: 0px 30px;
+    margin-bottom: 20px;
+    
+    
+  }
+
+
+.dropdown {
+    position: static; /* 드롭다운 메뉴의 포지션을 static으로 변경 */
+}
+
+.dropdown-content {
+    display: none;
+    position: static;
+    background-color: #0453bc;
+    
+}
+
+
+/* 클릭 시 드롭다운 메뉴 표시 */
+.dropdown:active .dropdown-content {
+    display: block; 
+    
+}
+body > header > nav > ul > li:nth-child(2):active .dropdown-content{
+    display: block;
+}
+
+body > header > nav > ul > li:nth-child(3):active .dropdown-content{
+    display: block;
+}
+
+body > header > nav > ul > li:nth-child(4):active .dropdown-content{
+    display: block;
+}
+
+.PC-dropdown {
+
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    opacity: 0.8;
+    top: 100%;
+    /* 부모 요소 하단에 위치 */
+    left: 0;
+
+}
+
+body > header > nav > ul > li:nth-child(1) > div > a,
+body > header > nav > ul > li:nth-child(2) > div > a,
+body > header > nav > ul > li:nth-child(3) > div > a,
+body > header > nav > ul > li:nth-child(4) > div > a
+
+{
+    font-size: 15px;
+}
+
+header:hover .PC-dropdown {
+  display: none;
+}
+
+
+.nav-toggle{
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+    font-size: 20px;
+    
+  }
+    
+.swiper-container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-img img {
+    display: block;
+    width: 485px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.swiperbox {
+    position: static;
+}
+
+
+
+.slider {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.text {
+    height: auto;
+    
+    background-color: rgb(255, 255, 255);
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    margin: 10px 0px;
+
+}
+
+.swiper-scrollbar{
+    display: none;
+}
+
+.text>span {
+    font-size: 30px;
+
+}
+
+.text>p {
+    font-size: 18px;
+}
+
+body>main>div>div:nth-child(2)>hr {
+    display: none;
+
+
+}
+
+
+/*introduction*/
+
+.introduction {
+
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin: 60px 0px;
+    height: 900px;
+    align-items: stretch;
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+.introduction-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    position: absolute;
+    left: 0%;
+    top: 26%;
+    background-color: rgb(241 241 241);
+    
+    width: 80%;
+    padding: 78px 28px;
+    height: 550px;
+    z-index: -1;
+    
+
+}
+
+.introduction-text h3 {
+    display: none;
+    font-size: 25px;
+    font-family: 'ROKAFSansMedium';
+}
+
+.introduction-text h2 {
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.introduction-text span {
+    font-size: 15px;
+    line-height: 2.1;
+    white-space: wrap;
+    width: auto;
+
+
+}
+
+.introduction::before {
+    display: none;
+    content: "";
+    background: rgb(255 224 71);
+    height: 23px;
+    width: 145px;
+    position: relative;
+    bottom: 175px;
+
+}
+
+.introduction-img {
+    position: relative;
+    justify-content: flex-end;
+}
+
+
+.introduction-img>img {
+    
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    
+
+}
+
+.introduction-img::before {
+    display: none;
+    content: '';
+    /* 배경색으로 테두리션을 표현하므로 컨텐츠는 필요 없음 */
+    background-color: rgb(241 241 241);
+    width: 100px;
+    height: 700px;
+    width: 145px;
+    /* 선 길이 조절 */
+    position: relative;
+    left: 80px;
+    z-index: -1;
+    /* 타이틀 컨텐츠 뒤로 가상요소를 배치 */
+
+}
+
+
+
+/*business*/
+.business {
+    margin: 40px 30px;
+}
+
+.business>h2 {
+    display: none;
+    font-size: 60px;
+    font-family: 'ROKAFSansBold';
+}
+
+.business>hr {
+    display: none;
+    margin: 50px 0px;
+
+}
+
+.business>p {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.card {   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.business-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(241 241 241);
+    width: 100%;
+}
+
+.business-card>h1 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.business-card>p {
+
+    text-align: center;
+    line-height: 200%;
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+
+.business-card>img{
+    width:100%
+}
+
+
+footer {
+    margin-top: 50px;
+    background-color: #0453bc;
+    color: white;
+    height: 80px;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+#scrollToTopBtn img {
+    width: 50px; /* 이미지의 너비 */
+    height: auto; /* 이미지의 높이 자동 조정 */
+    cursor: pointer;/* 다른 필요한 스타일 추가 가능 */
+  }
+
+
+}

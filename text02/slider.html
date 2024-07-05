@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- 스타일 추가 -->
+  <style>
+
+    .swiper-container {
+      width: 100%;
+      height: 100%; /* 슬라이드 높이 설정 */
+      overflow: hidden; /* 스크롤을 감추기 위해 필요 */
+      position: relative;
+    }
+
+    .swiper-wrapper {
+      display: flex; /* 슬라이드를 가로로 배열하기 위해 필요 */
+    }
+
+    .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: var(--swiper-scrollbar-sides-offset, 10%);
+    bottom: var(--swiper-scrollbar-bottom, 0px);
+    top: var(--swiper-scrollbar-top, auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size, 20px);
+    width: calc((100% / 3) - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+}
+ 
+    .swiper-scrollbar {
+    border-radius: var(--swiper-scrollbar-border-radius, 0px);
+    position: relative;
+    touch-action: none;
+    background: var(--swiper-scrollbar-bg-color, rgba(223, 19, 19, 0.1));
+    background-color: #ccc;
+    width: 200px;
+    }
+    .swiper-scrollbar-drag {
+
+    position: relative;
+    border-radius: 0px;
+    left: 0px;
+    top: 0px;
+    background-color: #ffe047;;
+    height: 20px;
+    }
+
+    .text {
+    
+    background-color: rgb(243, 248, 253);
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    opacity: 0.7;
+    padding: 190px 50px;
+    text-align: left;
+    z-index: 2;
+    bottom: 0%;
+    left: 55%;
+
+
+}
+
+
+
+.text>span {
+    font-size: 50px;
+
+
+}
+
+.text>p {
+    margin : 10px 5px;
+    font-size: 20px;
+}
+  </style>
+
+
+  <title>Swiper Scroll Slide Example</title>
+</head>
+<body>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><div class="slider-img">
+        <img src="img/slider_01.jpg" />
+    </div></div>
+    <div class="swiper-slide"><div class="slider-img">
+        <img src="img/slider_02.jpg" />
+    </div></div>
+    <div class="swiper-slide"><div class="slider-img">
+        <img src="img/slider_03.jpg" />
+    </div></div>
+    <!-- 필요한 만큼의 슬라이드 추가 -->
+    
+   
+  </div>
+  <div class="text">
+    <span>
+        안정적 가치창출과 만족을,<br> 기업 구성원의 꿈과<br> 성취를 함께하는 기업
+    </span>
+    <p><br>재화와 서비스의 공급을 혁신하여 산업을 선도합니다.</p>
+</div>
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper 초기화 -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1, // 슬라이드 한 번에 보여질 개수 설정
+    spaceBetween: 1, // 슬라이드 간격 설정
+    freeMode: true, // 스크롤 모드 활성화
+    scrollbar: {
+      el: '.swiper-scrollbar', // 스크롤바 요소 선택자
+      hide: false, // 스크롤바를 항상 표시
+      effect:'slide',
+    },
+  });
+</script>
+
+</body>
+</html>
